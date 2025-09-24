@@ -1,1 +1,1 @@
-Trying new changes
+![workflow](https://github.com/evelinmihaylov/devops2/actions/workflows/main.yml/badge.svg)
