@@ -18,9 +18,11 @@
         <!-- MongoDB Java driver -->
         <dependency>
             <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver</artifactId>
-            <version>3.6.4</version>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.14</version> <!-- latest 3.x -->
         </dependency>
+
+
     </dependencies>
 
 </project>
