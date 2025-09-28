@@ -8,8 +8,12 @@ import org.bson.Document;
 public class Main {
     public static void main(String[] args) {
         // Use try-with-resources so MongoClient is closed automatically
-        try (MongoClient mongoClient = new MongoClient("localhost", 27000)) {
+
+        try (MongoClient mongoClient = new MongoClient("mongo-dbserver", 27017)) {
+
             // Get a database - will create when we use it
+
+
             MongoDatabase database = mongoClient.getDatabase("mydb");
             // Get a collection from the database
             MongoCollection<Document> collection = database.getCollection("test");
