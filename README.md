@@ -8,7 +8,7 @@
 
 
 # DevOps
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/<username>/<repository>/<action name taken from main.yml>/<branch>?style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/evelinmihaylov/devops2/main.yml)
 
 
 docker run -d -p 27000:27017 --name mongo mongo:latest
