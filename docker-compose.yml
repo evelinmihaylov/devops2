@@ -1,0 +1,18 @@
+version: '3'
+services:
+  # Application
+  app:
+    build: .
+    depends_on:
+      - db
+    restart: on-failure
+
+  # Database
+  db:
+    build: ./db
+    container_name: mysql-db
+    restart: always
+    ports:
+      - "33060:3306"
+    volumes:
+      - ./db/test_db/init_permissions.sql:/docker-entrypoint-initdb.d/init_permissions.sql
