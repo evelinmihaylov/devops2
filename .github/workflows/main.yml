@@ -20,6 +20,8 @@ jobs:
 
       - name: Build with Maven
         run: mvn package
+        working-directory: Labo02CI  # 👈 tell Maven where pom.xml is
 
       - name: Run docker compose
         run: docker compose up --abort-on-container-exit
+        working-directory: Labo02CI  # 👈 tell Docker where docker-compose.yml is
