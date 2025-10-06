@@ -1,28 +1,25 @@
-name: A workflow for my Hello World App
+name: lab03 workflow docker compose
 on: push
 
 jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-22.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v2
         with:
-          java-version: '17'
+          submodules: recursive
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
           distribution: 'adopt'
 
       - name: Build with Maven
-        run: mvn -B clean package
+        run: mvn package
 
-      - name: Build Docker Image
-        run: docker build -t devopsimage .
-
-      - name: Run image
-        run: docker run --name devopscontainer -d devopsimage
-
-      - name: View logs
-        run: docker logs devopscontainer
+      - name: Run docker compose
+        run: docker compose up --abort-on-container-exit
