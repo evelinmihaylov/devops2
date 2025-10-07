@@ -15,11 +15,11 @@
     </properties>
 
     <dependencies>
-        <!-- MongoDB Java driver -->
+        <!-- ✅ MySQL Java Connector -->
         <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.12.14</version>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.33</version>
         </dependency>
     </dependencies>
 
